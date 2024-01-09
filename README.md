@@ -50,7 +50,7 @@ Contributions to Dynamic Pong are welcome! If you have suggestions for improveme
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE.md) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## About the Author
 

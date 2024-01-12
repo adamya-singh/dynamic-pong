@@ -734,42 +734,46 @@ ball_group.add(ball)
 game_manager = GameManager(ball_group, paddle_group, background_group, divider_line_group)
 
 # Game loop
-while True:
-    # Handle user input events
-    for event in pygame.event.get():
-        # Handle quit event
-        if event.type == pygame.QUIT:
-            pygame.quit()  # Uninitialize all pygame modules
-            sys.exit()  # Exit the program
+def main():
+    while True:
+        # Handle user input events
+        for event in pygame.event.get():
+            # Handle quit event
+            if event.type == pygame.QUIT:
+                pygame.quit()  # Uninitialize all pygame modules
+                sys.exit()  # Exit the program
 
-        # Handle key press events
-        if event.type == pygame.KEYDOWN:
-            # Increase player movement speed if 'down' or 's' key is pressed
-            if event.key == pygame.K_DOWN or event.key == pygame.K_s:
-                player.movement += player.speed
-            # Decrease player movement speed if 'up' or 'w' key is pressed
-            if event.key == pygame.K_UP or event.key == pygame.K_w:
-                player.movement -= player.speed
+            # Handle key press events
+            if event.type == pygame.KEYDOWN:
+                # Increase player movement speed if 'down' or 's' key is pressed
+                if event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                    player.movement += player.speed
+                # Decrease player movement speed if 'up' or 'w' key is pressed
+                if event.key == pygame.K_UP or event.key == pygame.K_w:
+                    player.movement -= player.speed
 
-        # Handle key release events
-        if event.type == pygame.KEYUP:
-            # Adjust player movement based on simultaneous key presses
-            if event.key == pygame.K_DOWN or event.key == pygame.K_s:
-                # Reset movement if 'up' or 'w' is still pressed, else stop movement
-                player.movement = -player.speed if pygame.key.get_pressed()[pygame.K_UP] or pygame.key.get_pressed()[pygame.K_w] else 0
-            if event.key == pygame.K_UP or event.key == pygame.K_w:
-                # Reset movement if 'down' or 's' is still pressed, else stop movement
-                player.movement = player.speed if pygame.key.get_pressed()[pygame.K_DOWN] or pygame.key.get_pressed()[pygame.K_s] else 0
+            # Handle key release events
+            if event.type == pygame.KEYUP:
+                # Adjust player movement based on simultaneous key presses
+                if event.key == pygame.K_DOWN or event.key == pygame.K_s:
+                    # Reset movement if 'up' or 'w' is still pressed, else stop movement
+                    player.movement = -player.speed if pygame.key.get_pressed()[pygame.K_UP] or pygame.key.get_pressed()[pygame.K_w] else 0
+                if event.key == pygame.K_UP or event.key == pygame.K_w:
+                    # Reset movement if 'down' or 's' is still pressed, else stop movement
+                    player.movement = player.speed if pygame.key.get_pressed()[pygame.K_DOWN] or pygame.key.get_pressed()[pygame.K_s] else 0
 
-    # Execute game logic
-    game_manager.run_game()
+        # Execute game logic
+        game_manager.run_game()
 
-    # Display the current difficulty level on the screen
-    speed_text = game_font.render(f"Difficulty: {speed_multiplier - 6}", False, text_colors[speed_multiplier - 7])
-    screen.blit(speed_text, (650 * width_ratio, 550 * height_ratio))
+        # Display the current difficulty level on the screen
+        speed_text = game_font.render(f"Difficulty: {speed_multiplier - 6}", False, text_colors[speed_multiplier - 7])
+        screen.blit(speed_text, (650 * width_ratio, 550 * height_ratio))
 
-    # Update the full display Surface to the screen
-    pygame.display.flip()
+        # Update the full display Surface to the screen
+        pygame.display.flip()
 
-    # Maintain game loop at 60 frames per second
-    clock.tick(60)
+        # Maintain game loop at 60 frames per second
+        clock.tick(60)
+
+if __name__ == "__main__":
+    main()

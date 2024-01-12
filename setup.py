@@ -30,5 +30,6 @@ setup(
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
         "Operating System :: Microsoft :: Windows",
-    ]
+    ],
+    entry_points={"console_scripts": ["dynamic_pong = dynamic_pong.__main__:main"]}
 )

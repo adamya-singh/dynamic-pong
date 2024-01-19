@@ -7,7 +7,7 @@ here = os.path.abspath(os.path.dirname(__file__))
 with codecs.open(os.path.join(here, "README.md"), encoding="utf-8") as fh:
     long_description = "\n" + fh.read()
 
-VERSION = '0.0.1'
+VERSION = '1.0.0'
 DESCRIPTION = 'Dynamic Pong: A Python-based modern twist on classic Pong'
 LONG_DESCRIPTION = 'Dynamic Pong is an enhanced version of the classic Pong game, crafted in Python using Pygame. It features dynamic difficulty adjustments, customizable game elements, realistic collision physics, and real-time score tracking. This project exemplifies advanced Python programming, object-oriented design, and efficient use of the Pygame library.'
 

@@ -162,5 +162,8 @@ cython_debug/
 # misc (dev_stuff)
 dev_stuff/
 
+#venv
+venv
+
 #apple folder attributes file
 .DS_Store

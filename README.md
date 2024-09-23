@@ -54,4 +54,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## About the Author
 
-Adamya Singh - Aspiring software developer with a passion for game development and Python programming. Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/adamya-singh-0a8746184/).
+Adamya Singh - Software developer with a passion for machine learning and functional programming. Feel free to connect with me on [LinkedIn](https://www.linkedin.com/in/adamya-singh-0a8746184/).

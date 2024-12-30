@@ -63,6 +63,10 @@ jobs:
       with:
         name: python-package-distributions
         path: dist/
+    - name: Install dependencies for Sigstore
+      run: |
+        python3 -m pip install --upgrade pip
+        python3 -m pip install securesystemslib==1.1.0
     - name: Sign the dists with Sigstore
       uses: sigstore/gh-action-sigstore-python@v1.2.3
       with:

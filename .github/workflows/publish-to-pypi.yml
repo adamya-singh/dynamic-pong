@@ -115,3 +115,4 @@ jobs:
       uses: pypa/gh-action-pypi-publish@release/v1
       with:
         repository-url: https://test.pypi.org/legacy/
+        timeout: 15 #Increase timeout to 15 seconds because workflow was failing by timeout

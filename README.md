@@ -11,18 +11,23 @@ Dynamic Pong is a modern rendition of the classic arcade game Pong, crafted with
 
 ## Installation
 
-To play Dynamic Pong, you need to have Python and Pygame installed on your system.
+To install and play Dynamic Pong, follow these simple steps:
 
-1. **Install Python**: Download and install Python from [python.org](https://www.python.org/downloads/).
-2. **Install Pygame**: Run `pip install pygame` in your command line.
-3. **Download the Game**: Clone or download this repository to your local machine.
+1. Open a terminal or command prompt.
+2. Run the command:
+   ```sh
+   pip install dynamic_pong
+   ```
+3. Wait for the installation to complete.
 
 ## How to Play
 
-1. Navigate to the directory containing the game files.
-2. Run the script `python dynamic_pong.py`.
-3. Control the left paddle using the `Up` and `Down` arrow keys or the `W` and `S` keys.
-4. The game continues indefinitely until manually exited.
+1. After installation, run the command:
+   ```sh
+   dynamic_pong
+   ```
+2. Control the left paddle using the `Up` and `Down` arrow keys or the `W` and `S` keys.
+3. The game continues indefinitely until manually exited.
 
 ## Code Examples
 

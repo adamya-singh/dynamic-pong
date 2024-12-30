@@ -98,6 +98,8 @@ jobs:
     - build
     runs-on: ubuntu-latest
 
+    if: "!startsWith(github.ref, 'refs/tags/')" #skip publish-to-testpypi for tagged pushes
+
     environment:
       name: testpypi
       url: https://test.pypi.org/p/dynamic_pong

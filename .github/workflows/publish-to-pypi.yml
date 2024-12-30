@@ -102,6 +102,8 @@ jobs:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
 
     steps:
+    - name: Clean previous builds
+      run: rm -rf dist/
     - name: Download all the dists
       uses: actions/download-artifact@v3
       with:
